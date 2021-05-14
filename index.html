@@ -1,8 +1,8 @@
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
   <style>
-	  * {box-sizing: boder-box}
+	 
     h1{
       text-align: center;
       Color: #F0FFFF;
@@ -38,35 +38,9 @@
 	  background-image: url("bg4.jpg");
 	  
     }
-   html{
-	height: 100%;
-	margin: 0;
+   
 	 
-    }
-    .tablink{
-         border-color: #555555;
-	 color: black;
-	 float: left;
-	 border: none;
-	 outline: none;
-	 cursor: pointer;
-	 padding: 14px 16px;
-	 font-size: 17px;
-	 width: 25%;
-    }
-    .tablink:hover{
-	 background-color: #777777;
-    }
-    .tabcontent{
-	 color: white;
-	 display: none;
-	 padding: 100p 20px;
-	 height: 100%;
-    }
-    #Skills {background-color: red;}
-    #Projects {background-color: green;}
-    #Hobbies {background-color: blue;}
-    #contact {background-color: orange;}
+    
   </style>
   
 <title>Shubham Jadhav</title>
@@ -77,34 +51,8 @@
   <h1> Shubham Devrao Jadhav</h1> 
   <h2>BE - Information Technology - Dr. D. Y. Patil College of Engineering, Akurdi, Pune.</h2>
 </div>
-<div>
-<button class="tablink" onclick="openPage('Home', this, 'red')">Skills</button>
-<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">Projects</button>
-<button class="tablink" onclick="openPage('Contact', this, 'blue')">Hobbies</button>
-<button class="tablink" onclick="openPage('About', this, 'orange')">Contact</button>
-</div>
- <div id="Skills" class="tabcontent">
-     <h3>Skills</h3>
-     <p>Home is where the heart is..</p>
- </div>
+
 	
-<script>
-function openPage(pageName,elmnt,color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
 
-
-document.getElementById("defaultOpen").click();
-</script>
 </body>
 </html>
