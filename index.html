@@ -64,7 +64,7 @@
 	 height: 100%;
     }
     #Skills {background-color: red;}
-    #Project {background-color: green;}
+    #Projects {background-color: green;}
     #Hobbies {background-color: blue;}
     #contact {background-color: orange;}
   </style>
@@ -78,7 +78,28 @@
   <h2>BE - Information Technology - Dr. D. Y. Patil College of Engineering, Akurdi, Pune.</h2>
 </div>
 <div>
-
+<button class="tablink" onclick="openPage('Home', this, 'red')">Skills</button>
+<button class="tablink" onclick="openPage('News', this, 'green')" id="defaultOpen">Projects</button>
+<button class="tablink" onclick="openPage('Contact', this, 'blue')">Hobbies</button>
+<button class="tablink" onclick="openPage('About', this, 'orange')">Contact</button>
 </div>
+<script>
+function openPage(pageName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(pageName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+}
+
+
+document.getElementById("defaultOpen").click();
+</script>
 </body>
 </html>
